@@ -10,11 +10,14 @@
                 <p class="card-text"><strong>Email:</strong> {{ $user->email }}</p>
                 <p class="card-text"><strong>Contact Number:</strong> {{ $user->contact_number }}</p>
                 <p class="card-text"><strong>Gender:</strong> {{ ucfirst($user->gender) }}</p>
+                <p class="card-text"><strong>Account Created_At:</strong> {{ $user->created_at }}</p>
+                <p class="card-text"><strong>Account Updated_At:</strong> {{ $user->updated_at }}</p>
                 <a href="{{ route('users.edit', $user->id) }}" class="btn btn-primary">Edit</a>
                 <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="d-inline">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Delete</button>
+                    <a href="{{ route('users.index')}}" class="btn btn-secondary">Back</a>
                 </form>
             </div>
         </div>

@@ -26,7 +26,10 @@
                     <option value="other" {{ $user->gender === 'other' ? 'selected' : '' }}>Other</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn btn-primary">Update</a>
+            </button>
+            <a href="{{ route('users.index')}}" class="btn btn-secondary">Back</a>
+            </a>
         </form>
     </div>
 @endsection

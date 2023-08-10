@@ -9,7 +9,8 @@ class UserController extends Controller
 {
     public function index()
 {
-    $users = User::all();
+    $query = User::query();
+    $users = $query->orderBy('id', 'desc')->paginate(5);
     return view('users.index', compact('users'));
 }
 
@@ -23,7 +24,7 @@ public function store(Request $request)
     $validatedData = $request->validate([
         'name' => 'required',
         'email' => 'required|email|unique:users',
-        'contact_number' => 'required',
+        'contact_number' => 'required|digits:10',
         'gender' => 'required',
     ]);
 
