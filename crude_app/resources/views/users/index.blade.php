@@ -10,6 +10,7 @@
                     <th>S.N</th> 
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Address</th>
                     <th>Contact Number</th>
                     <th>Gender</th>
                     <th>Actions</th>
@@ -21,6 +22,7 @@
                         <td>{{ ($users->currentPage() - 1) * $users->perPage() + $key + 1 }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
+                        <td>{{ $user->address }}</td>
                         <td>{{ $user->contact_number }}</td>
                         <td>{{ ucfirst($user->gender) }}</td>
                         <td>

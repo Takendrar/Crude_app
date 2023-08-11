@@ -24,6 +24,7 @@ public function store(Request $request)
     $validatedData = $request->validate([
         'name' => 'required',
         'email' => 'required|email|unique:users',
+        'address' => 'required',
         'contact_number' => 'required|digits:10',
         'gender' => 'required',
     ]);
@@ -48,6 +49,7 @@ public function update(Request $request, User $user)
     $validatedData = $request->validate([
         'name' => 'required',
         'email' => 'required|email|unique:users,email,' . $user->id,
+        'address' => 'required',
         'contact_number' => 'required',
         'gender' => 'required',
     ]);

@@ -29,6 +29,13 @@
             @enderror
             </div>
             <div class="mb-3">
+                <label for="address" class="form-label">Address:</label>
+                <input type="text" id="address" name="address" class="form-control" value="{{ old('address') }}" required>
+                @error('address')
+                <div class="error" style="color: red;">{{ $message }}</div>
+            @enderror
+            </div>
+            <div class="mb-3">
                 <label for="contact_number" class="form-label">Contact Number:</label>
                 <input type="text" id="contact_number" name="contact_number" class="form-control" value="{{ old('contact_number') }}" required>
                 @error('contact_number')

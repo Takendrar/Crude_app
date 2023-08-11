@@ -8,6 +8,7 @@
                 <h5 class="card-title">User Information</h5>
                 <p class="card-text"><strong>Name:</strong> {{ $user->name }}</p>
                 <p class="card-text"><strong>Email:</strong> {{ $user->email }}</p>
+                <p class="card-text"><strong>Address:</strong> {{ $user->address }}</p>
                 <p class="card-text"><strong>Contact Number:</strong> {{ $user->contact_number }}</p>
                 <p class="card-text"><strong>Gender:</strong> {{ ucfirst($user->gender) }}</p>
                 <p class="card-text"><strong>Account Created_At:</strong> {{ $user->created_at }}</p>

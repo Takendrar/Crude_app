@@ -10,9 +10,14 @@
                 <label for="name" class="form-label">Name:</label>
                 <input type="text" id="name" name="name" value="{{ $user->name }}" class="form-control" required>
             </div>
+
             <div class="mb-3">
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" id="email" name="email" value="{{ $user->email }}" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Address:</label>
+                <input type="text" id="address" name="address" value="{{ $user->address }}" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="contact_number" class="form-label">Contact Number:</label>
